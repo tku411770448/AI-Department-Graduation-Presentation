@@ -1,1 +1,1 @@
-# -AI-Department-Graduation-Presentation
+# AI-Department-Graduation-Presentation
