@@ -7,3 +7,7 @@
 ### `git pull` command implementation
 
 ![](git-pull.png)
+
+### Correct commit message
+
+![](correct-commit-message.png)
