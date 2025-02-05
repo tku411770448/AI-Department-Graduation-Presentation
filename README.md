@@ -97,7 +97,7 @@ Windows11 + WSL_Ubuntu-20.04(LTS)
 
 4. Python_Building
 
-![W11-python-bindings](W11-python-bindings.png)
+![W11-python-bindings](./images/W11-python-bindings.png)
 
     
 
