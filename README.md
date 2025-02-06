@@ -79,7 +79,7 @@ nvidia-smi
 
 # Implementation Environment
 Windows11 + WSL_Ubuntu-20.04(LTS)  
-**[Windows11](#Windows11)  / [WSL_Ubuntu-20.04-LTS](#WSL_Ubuntu-20.04-LTS)**
+**[Windows11](#Windows11)  / [WSL_Ubuntu-20.04-LTS](#wsl_ubuntu-20-04lts)**
 ## Windows11
 
 - Environment
@@ -91,7 +91,7 @@ Windows11 + WSL_Ubuntu-20.04(LTS)
     pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
      ```
     - TensorRT 10.1.0
-## TensorRT Installation Guide
+### TensorRT Installation Guide
 
 1.Extract the downloaded files.
 
@@ -103,7 +103,7 @@ Windows11 + WSL_Ubuntu-20.04(LTS)
 
 ![W11-python-bindings](./images/W11-python-bindings.png)
 
-## WSL_Ubuntu-20.04-LTS
+## WSL_Ubuntu-20.04(LTS)
 
 - Environment
     - python 3.10.16
@@ -114,33 +114,33 @@ Windows11 + WSL_Ubuntu-20.04(LTS)
     pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
      ```
     - TensorRT 10.1.0
-# TensorRT Installation Guide
+### TensorRT Installation Guide
 
 - Main System
 &nbsp; [Debian Installation](https://docs.nvidia.com/deeplearning/tensorrt/latest/installing-tensorrt/installing.html#using-a-local-repo-for-debian-installation)
 
 - Your Executing Environment (ex：torch-3.10)
 
-## 1. [NVIDIA TensorRT 10.x Download](https://developer.nvidia.com/tensorrt/download/10x)  click the NVIDIA TensorRT License Agreement and find the archive that best fit your OS and devices.
+### 1. [NVIDIA TensorRT 10.x Download](https://developer.nvidia.com/tensorrt/download/10x)  click the NVIDIA TensorRT License Agreement and find the archive that best fit your OS and devices.
 
 **Make sure you have activated the environment**  
 Follow these steps to install TensorRT on WSL Ubuntu 20.04.  
 
-## 2. Install the Local TensorRT Repository  
+### 2. Install the Local TensorRT Repository  
 First, navigate to the directory where the TensorRT `.deb` package is located and install it using `dpkg`:  
 ```bash
 cd /mnt/c/Users/PZJ/Downloads
 sudo dpkg -i nv-tensorrt-local-repo-ubuntu2004-10.1.0-cuda-11.8_1.0-1_amd64.deb
 ```
 
-## 3. Add GPG Key and Update Package List  
+### 3. Add GPG Key and Update Package List  
 After installing the local repository package, copy the GPG key to the appropriate directory and update the package list:  
 ```bash
 sudo cp /var/nv-tensorrt-local-repo-ubuntu2004-10.1.0-cuda-11.8/*.pub /usr/share/keyrings/
 sudo apt-get update
 ```
 
-## 4. Install TensorRT and Dependencies  
+### 4. Install TensorRT and Dependencies  
 To install TensorRT and its necessary dependencies, run the following commands:  
 ```bash
 sudo apt-get install -y tensorrt
@@ -149,13 +149,13 @@ sudo apt-get install -y uff-converter-tf
 sudo apt-get install -y onnx-graphsurgeon
 ```
 
-## 5. Verify Installation  
+### 5. Verify Installation  
 To check if TensorRT has been successfully installed, use the following command:  
 ```bash
 dpkg -l | grep TensorRT
 ```
 
-## 6. Test TensorRT Execution  
+### 6. Test TensorRT Execution  
 To verify that TensorRT is functioning correctly, you can run an inference test using `trtexec` with an ONNX model:  
 ```bash
 trtexec --onnx=<your_model>.onnx
