@@ -16,18 +16,18 @@ We use [TensorRT's pytorch quntization tool](https://github.com/NVIDIA/TensorRT/
 
 For those who are not familiar with QAT, I highly recommend watching this video:<br> [Quantization explained with PyTorch - Post-Training Quantization, Quantization-Aware Training](https://www.youtube.com/watch?v=0VdNflU08yA)
 
-## Getting started (工欲善其事，必先利其器)
+# Getting started (工欲善其事，必先利其器)
 For getting started, needs some steps.
 
-&nbsp; **Git Download** 
+## **Git Download** 
 
-&nbsp; [Git](https://git-scm.com/downloads)  
+[Git](https://git-scm.com/downloads)  
 - Settings：[git_command](./git_command/git_command.pdf)
 
 
-&nbsp; **Download Archive** 
+## **Download Archive** 
 
-&nbsp; [yolov9](https://github.com/WongKinYiu/yolov9)  
+[yolov9](https://github.com/WongKinYiu/yolov9)  
  
 ```
 git clone https://github.com/WongKinYiu/yolov9.git
@@ -38,8 +38,7 @@ git status
 ```
 git pull
 ```
-
-&nbsp; [yolov9-qat](https://github.com/levipereira/yolov9-qat)  
+[yolov9-qat](https://github.com/levipereira/yolov9-qat)  
  
 ```
 git clone https://github.com/levipereira/yolov9-qat.git
@@ -51,7 +50,12 @@ git status
 git pull
 ```
 
-&nbsp; *CUDA / cudnn Info*
+## **CUDA / cudnn Info**
+
+Check the info and choose the best fit to your device.
+```
+nvidia-smi
+```
 
 | Version         | Python version   | Compiler   | Build tools  | cuDNN | CUDA  |
 |---------------|----------------|-----------|-------------|------|------|
@@ -73,10 +77,10 @@ git pull
 
 &nbsp; [CUDA](https://developer.nvidia.com/cuda-toolkit-archive)  &nbsp; [cudnn](https://developer.nvidia.com/rdp/cudnn-archive)  &nbsp; [pytorch](https://pytorch.org/)  &nbsp; [TensorRT](https://developer.nvidia.com/tensorrt/download)
 
-## Implementation Environment
+# Implementation Environment
 Windows11 + WSL_Ubuntu-20.04(LTS)  
-**[Windows11](#Windows11)  / [WSL_Ubuntu-20.04(LTS) ](#WSL_Ubuntu-20.04(LTS))**
-### Windows11
+**[Windows11](#Windows11)  / [WSL_Ubuntu-20.04(LTS)](#WSL_Ubuntu-20.04(LTS))**
+## Windows11
 
 - Environment
     - python 3.10.16
@@ -84,20 +88,148 @@ Windows11 + WSL_Ubuntu-20.04(LTS)
     - cudnn 8.8
     - pytorch    
     ```
-    git clone https://github.com/levipereira/yolov9-qat.git
+    pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
      ```
     - TensorRT 10.1.0
-### TensorRT Installation Guide
+## TensorRT Installation Guide
 
-1. Extract the downloaded files.
+1.Extract the downloaded files.
 
-2. Set the necessary environment variables in the installation directory.
+2.Set the necessary environment variables in the installation directory.
 
-3. Add the `bin` and `lib` folders to the `PATH`.
+3.Add the `bin` and `lib` folders to the `PATH`.
 
-4. Python_Building
+4.Python_Building
 
 ![W11-python-bindings](./images/W11-python-bindings.png)
+
+## WSL_Ubuntu-20.04(LTS)
+
+- Environment
+    - python 3.10.16
+    - CUDA 11.8
+    - cudnn 8.6
+    - pytorch    
+    ```
+    pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+     ```
+    - TensorRT 10.1.0
+# TensorRT Installation Guide
+
+- Main System
+&nbsp; [Debian Installation](https://docs.nvidia.com/deeplearning/tensorrt/latest/installing-tensorrt/installing.html#using-a-local-repo-for-debian-installation)
+
+- Your Executing Environment (ex：torch-3.10)
+
+## 1. [NVIDIA TensorRT 10.x Download](https://developer.nvidia.com/tensorrt/download/10x)  click the NVIDIA TensorRT License Agreement and find the archive that best fit your OS and devices.
+
+**Make sure you have activated the environment**  
+Follow these steps to install TensorRT on WSL Ubuntu 20.04.  
+
+## 2. Install the Local TensorRT Repository  
+First, navigate to the directory where the TensorRT `.deb` package is located and install it using `dpkg`:  
+```bash
+cd /mnt/c/Users/PZJ/Downloads
+sudo dpkg -i nv-tensorrt-local-repo-ubuntu2004-10.1.0-cuda-11.8_1.0-1_amd64.deb
+```
+
+## 3. Add GPG Key and Update Package List  
+After installing the local repository package, copy the GPG key to the appropriate directory and update the package list:  
+```bash
+sudo cp /var/nv-tensorrt-local-repo-ubuntu2004-10.1.0-cuda-11.8/*.pub /usr/share/keyrings/
+sudo apt-get update
+```
+
+## 4. Install TensorRT and Dependencies  
+To install TensorRT and its necessary dependencies, run the following commands:  
+```bash
+sudo apt-get install -y tensorrt
+sudo apt-get install -y python3-libnvinfer-dev
+sudo apt-get install -y uff-converter-tf
+sudo apt-get install -y onnx-graphsurgeon
+```
+
+## 5. Verify Installation  
+To check if TensorRT has been successfully installed, use the following command:  
+```bash
+dpkg -l | grep TensorRT
+```
+
+## 6. Test TensorRT Execution  
+To verify that TensorRT is functioning correctly, you can run an inference test using `trtexec` with an ONNX model:  
+```bash
+trtexec --onnx=<your_model>.onnx
+```
+
+# Notice
+**Please make sure that the TensorRT version built into the system is consistent with the version installed in Python.**
+
+**Make sure environment variables are set correctly.**
+
+```
+nano ~/.bashrc
+```
+Edit in nano
+```
+source ~/.bashrc
+```
+
+![Environment-variables-settings](./images/Environment-variables-settings.png)
+
+## Verify the Version
+
+![verify-version](./images/verify-version.png)
+
+PS：The command `python -c "import tensorrt as trt; print(trt.__version__)" `
+-> (10.8.0.43) version here refers to the tensorrt-cu12 version, not the real Python TensorRT version. Among them tensorrt-cu12 is the underlying C++ package.
+
+If didn't obey may cause：
+`Attributeerror: 'nonetype' object has no attribute 'num_io_tensors'`
+
+# Other Testing
+
+## Verify CUDA
+
+```
+nvcc -V
+```
+or
+```
+deviceQuery
+```
+
+![verify-CUDA](./images/verify-CUDA.png)
+
+## Verify cudnn
+
+```
+cat /usr/include/cudnn_version.h | grep CUDNN_MAJOR -A 2
+
+```
+or
+```
+cat /usr/include/cudnn_version.h | grep CUDNN_MAJOR -A 2
+
+```
+
+![verify-cudnn](./images/verify-cudnn.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
 
