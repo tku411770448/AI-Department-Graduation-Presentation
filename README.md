@@ -79,7 +79,7 @@ nvidia-smi
 
 # Implementation Environment
 Windows11 + WSL_Ubuntu-20.04(LTS)  
-**[Windows11](#Windows11)  / [WSL_Ubuntu-20.04(LTS)](#WSL_Ubuntu-20.04(LTS))**
+**[Windows11](#Windows11)  / [WSL_Ubuntu-20.04-LTS](#WSL_Ubuntu-20.04-LTS)**
 ## Windows11
 
 - Environment
@@ -103,7 +103,7 @@ Windows11 + WSL_Ubuntu-20.04(LTS)
 
 ![W11-python-bindings](./images/W11-python-bindings.png)
 
-## WSL_Ubuntu-20.04(LTS)
+## ## WSL_Ubuntu-20-04-LTS
 
 - Environment
     - python 3.10.16
