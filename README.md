@@ -78,7 +78,7 @@ nvidia-smi
 &nbsp; [CUDA](https://developer.nvidia.com/cuda-toolkit-archive)  &nbsp; [cudnn](https://developer.nvidia.com/rdp/cudnn-archive)  &nbsp; [pytorch](https://pytorch.org/)  &nbsp; [TensorRT](https://developer.nvidia.com/tensorrt/download)
 
 # Implementation Environment
-Windows11 + WSL_Ubuntu-20.04(LTS)  
+Windows11 + [WSL](./About_WSL.pdf)_Ubuntu-20.04(LTS)  
 **[Windows11](#Windows11)  / [WSL_Ubuntu-20.04-LTS](#wsl_ubuntu-20-04-lts)**
 ## Windows11
 
