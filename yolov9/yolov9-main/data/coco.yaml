@@ -1,0 +1,23 @@
+# For Windows11
+# path: ../datasets/coco  # dataset root dir
+train: C:\Users\PZJ\Desktop\yolov9\train+val\train+val\train
+val: C:\Users\PZJ\Desktop\yolov9\train+val\train+val\val
+test: C:\Users\PZJ\Desktop\yolov9\test\test
+
+# ==================================================================================
+
+# For WSL Ubuntu-20.04(LTS)
+# train: /mnt/c/Users/PZJ/Desktop/yolov9/train+val/train+val/train
+# val: /mnt/c/Users/PZJ/Desktop/yolov9/train+val/train+val/val
+# test: /mnt/c/Users/PZJ/Desktop/yolov9/test/test
+
+# Classes
+names:
+  0: hat_on
+  1: hat_off
+  2: clothes_on
+  3: clothes_off
+  4: shoes_on
+  5: shoes_off
+  6: mask_on
+  7: mask_off
