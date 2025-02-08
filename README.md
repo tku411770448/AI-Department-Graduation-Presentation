@@ -187,7 +187,7 @@ PS：The command `python -c "import tensorrt as trt; print(trt.__version__)" `
 If didn't obey may cause：
 `Attributeerror: 'nonetype' object has no attribute 'num_io_tensors'`
 
-[execute_qat](./execute_qat.pdf)
+[execute_qat](./md&pdf/execute_qat.pdf)
 
 # Other Testing
 
