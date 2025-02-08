@@ -133,6 +133,8 @@ trtexec \
 
 - [SiLU_INT8](./SiLU_INT8.pdf)
 
+- [SiLU_INT8](./SiLU_FP16.pdf)
+
 
 
 
