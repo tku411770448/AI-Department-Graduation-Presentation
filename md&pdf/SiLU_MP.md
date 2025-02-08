@@ -18,8 +18,15 @@ Application Memory Clock Rate: 7.825 GHz
 ## Output Details
 - `Latency`: refers to the [min, max, mean, median, 99% percentile] of the engine latency measurements, when timing the engine w/o profiling layers.
 - `Throughput`: is measured in query (inference) per second (QPS).
+- `Enqueue Time`: Time taken to enqueue inference requests.
+- `H2D Latency`: Host-to-Device latency (data transfer time).
+- `GPU Compute Time`: Time spent computing on the GPU.
+- `D2H Latency`: Device-to-Host latency (data transfer time).
+- `Total Host Walltime`
+- `Total GPU Compute Time`
 
 # YOLOv9-C QAT (SiLU)
+## Precision: FP32+FP16+INT8
 ## Batch Size 1
 ```bash
 === Performance summary ===
@@ -60,7 +67,6 @@ Total Host Walltime: 10.0209 s
 Total GPU Compute Time: 10.019 s
 ```
 
-
 ## BatchSize 8
 ```bash
 === Performance summary ===
@@ -80,6 +86,7 @@ Total Host Walltime: 10.0268 s
 
 Total GPU Compute Time: 10.0259 s
 ```
+
 ## BatchSize 12
 ```bash
 === Performance summary ===
@@ -103,7 +110,7 @@ Total GPU Compute Time: 10.0727 s
 ## BatchSize 16
 ```bash
 === Performance summary ===
-hroughput: 25.3653 qps
+Throughput: 25.3653 qps
 
 Latency: min = 39.3718 ms, max = 39.4531 ms, mean = 39.4221 ms, median = 39.4221 ms, percentile(90%) = 39.4346 ms, percentile(95%) = 39.4404 ms, percentile(99%) = 39.4482 ms
 

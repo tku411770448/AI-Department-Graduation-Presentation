@@ -131,6 +131,8 @@ trtexec \
 
 - [SiLU_MP](./SiLU_MP.pdf)
 
+- [SiLU_INT8](./SiLU_INT8.pdf)
+
 
 
 
