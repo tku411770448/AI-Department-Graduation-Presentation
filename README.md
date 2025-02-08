@@ -78,7 +78,7 @@ nvidia-smi
 &nbsp; [CUDA](https://developer.nvidia.com/cuda-toolkit-archive)  &nbsp; [cudnn](https://developer.nvidia.com/rdp/cudnn-archive)  &nbsp; [pytorch](https://pytorch.org/)  &nbsp; [TensorRT](https://developer.nvidia.com/tensorrt/download)
 
 # Implementation Environment
-Windows11 + [WSL](./About_WSL.pdf)_Ubuntu-20.04(LTS)  
+Windows11 + [WSL](./md&pdf/About_WSL.pdf)_Ubuntu-20.04(LTS)  
 **[Windows11](#Windows11)  / [WSL_Ubuntu-20.04-LTS](#wsl_ubuntu-20-04-lts)**
 ## Windows11
 
@@ -101,7 +101,7 @@ Windows11 + [WSL](./About_WSL.pdf)_Ubuntu-20.04(LTS)
 
 4.Python_Building
 
-![W11-python-bindings](./images/W11-python-bindings.png)
+![W11-python-bindings](./non_reparameterize_images/W11-python-bindings.png)
 
 <a id="wsl_ubuntu-20-04-lts"></a>
 ## WSL_Ubuntu-20.04(LTS)
@@ -175,17 +175,19 @@ Edit in nano
 source ~/.bashrc
 ```
 
-![Environment-variables-settings](./images/Environment-variables-settings.png)
+![Environment-variables-settings](./non_reparameterize_images/Environment-variables-settings.png)
 
 ## Verify the Version
 
-![verify-version](./images/verify-version.png)
+![verify-version](./non_reparameterize_images/verify-version.png)
 
 PS：The command `python -c "import tensorrt as trt; print(trt.__version__)" `
 -> (10.8.0.43) version here refers to the tensorrt-cu12 version, not the real Python TensorRT version. Among them tensorrt-cu12 is the underlying C++ package.
 
 If didn't obey may cause：
 `Attributeerror: 'nonetype' object has no attribute 'num_io_tensors'`
+
+[execute_qat](./execute_qat.pdf)
 
 # Other Testing
 
@@ -199,7 +201,7 @@ or
 deviceQuery
 ```
 
-![verify-CUDA](./images/verify-CUDA.png)
+![verify-CUDA](./non_reparameterize_images/verify-CUDA.png)
 
 ## Verify cudnn
 
@@ -213,7 +215,7 @@ cat /usr/include/cudnn_version.h | grep CUDNN_MAJOR -A 2
 
 ```
 
-![verify-cudnn](./images/verify-cudnn.png)
+![verify-cudnn](./non_reparameterize_images/verify-cudnn.png)
 
 
 
