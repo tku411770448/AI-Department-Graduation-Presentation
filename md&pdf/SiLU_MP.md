@@ -129,7 +129,7 @@ Total GPU Compute Time: 10.0921 s
 
 ## BatchSize Resilience
 ```bash
- === Performance summary ===
+=== Performance summary ===
 Throughput: 51.5089 qps
 
 Latency: min = 19.2051 ms, max = 22.4696 ms, mean = 19.4124 ms, median = 19.2358 ms, percentile(90%) = 19.293 ms, percentile(95%) = 20.3141 ms, percentile(99%) = 21.8358 ms
