@@ -140,6 +140,8 @@ trtexec \
 
 - [ReLU_MP](./ReLU_MP.md)
 
+- [ReLU_INT8](./ReLU_INT8.md)
+
 
 
 
