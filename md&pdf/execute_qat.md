@@ -144,6 +144,14 @@ trtexec \
 
 - [ReLU_FP16](./ReLU_FP16.md)
 
+## yolov9-QAT(Mish)
+
+- [Mish_MP](./Mish_MP.md)
+
+- [Mish_INT8](./Mish_INT8.md)
+
+- [Mish_FP16](./Mish_FP16.md)
+
 
 
 
