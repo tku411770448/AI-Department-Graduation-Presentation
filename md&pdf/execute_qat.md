@@ -130,15 +130,15 @@ trtexec \
 # Result
 ## yolov9-QAT(SiLU)
 
-- [SiLU_MP](./SiLU_MP.pdf)
+- [SiLU_MP](./SiLU_MP.md)
 
-- [SiLU_INT8](./SiLU_INT8.pdf)
+- [SiLU_INT8](./SiLU_INT8.md)
 
-- [SiLU_FP16](./SiLU_FP16.pdf)
+- [SiLU_FP16](./SiLU_FP16.md)
 
 ## yolov9-QAT(ReLU)
 
-- [ReLU_MP](./ReLU_MP.pdf)
+- [ReLU_MP](./ReLU_MP.md)
 
 
 
