@@ -128,12 +128,18 @@ trtexec \
 | **執行細節**   | 封裝於腳本中，細節未展開                             | 直接執行 `trtexec`，所有參數顯式定義                 |
 
 # Result
+## yolov9-QAT(SiLU)
 
 - [SiLU_MP](./SiLU_MP.pdf)
 
 - [SiLU_INT8](./SiLU_INT8.pdf)
 
-- [SiLU_INT8](./SiLU_FP16.pdf)
+- [SiLU_FP16](./SiLU_FP16.pdf)
+
+## yolov9-QAT(ReLU)
+
+- [ReLU_MP](./ReLU_MP.pdf)
+
 
 
 
