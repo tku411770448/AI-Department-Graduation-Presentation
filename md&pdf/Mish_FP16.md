@@ -30,119 +30,119 @@ Application Memory Clock Rate: 7.825 GHz
 ## Batch Size 1
 ```bash
 === Performance summary ===
-Throughput: 365.25 qps
+Throughput: 348.531 qps
 
-Latency: min = 2.72076 ms, max = 2.7627 ms, mean = 2.73618 ms, median = 2.7373 ms, percentile(90%) = 2.73926 ms, percentile(95%) = 2.74023 ms, percentile(99%) = 2.74121 ms
+Latency: min = 2.85486 ms, max = 3.74609 ms, mean = 2.86726 ms, median = 2.86719 ms, percentile(90%) = 2.87012 ms, percentile(95%) = 2.87109 ms, percentile(99%) = 2.87256 ms
 
-Enqueue Time: min = 0.0180664 ms, max = 0.554688 ms, mean = 0.0436635 ms, median = 0.0307922 ms, percentile(90%) = 0.0749512 ms, percentile(95%) = 0.0883789 ms, percentile(99%) = 0.168945 ms
+Enqueue Time: min = 0.0185547 ms, max = 0.547607 ms, mean = 0.0413729 ms, median = 0.027832 ms, percentile(90%) = 0.0722656 ms, percentile(95%) = 0.0888672 ms, percentile(99%) = 0.185547 ms
 
 H2D Latency: min = 0 ms, max = 0 ms, mean = 0 ms, median = 0 ms, percentile(90%) = 0 ms, percentile(95%) = 0 ms, percentile(99%) = 0 ms
 
-GPU Compute Time: min = 2.72076 ms, max = 2.7627 ms, mean = 2.73618 ms, median = 2.7373 ms, percentile(90%) = 2.73926 ms, percentile(95%) = 2.74023 ms, percentile(99%) = 2.74121 ms
+GPU Compute Time: min = 2.85486 ms, max = 3.74609 ms, mean = 2.86726 ms, median = 2.86719 ms, percentile(90%) = 2.87012 ms, percentile(95%) = 2.87109 ms, percentile(99%) = 2.87256 ms
 
 D2H Latency: min = 0 ms, max = 0 ms, mean = 0 ms, median = 0 ms, percentile(90%) = 0 ms, percentile(95%) = 0 ms, percentile(99%) = 0 ms
 
-Total Host Walltime: 10.0041 s
+Total Host Walltime: 10.0077 s
 
-Total GPU Compute Time: 9.99799 s
+Total GPU Compute Time: 10.001 s
 ```
 
 ## BatchSize 4
 ```bash
 === Performance summary ===
-Throughput: 106.55 qps
+Throughput: 100.731 qps
 
-Latency: min = 9.33887 ms, max = 9.85602 ms, mean = 9.38359 ms, median = 9.38232 ms, percentile(90%) = 9.39453 ms, percentile(95%) = 9.39648 ms, percentile(99%) = 9.4043 ms
+Latency: min = 9.87646 ms, max = 10.3865 ms, mean = 9.92575 ms, median = 9.92285 ms, percentile(90%) = 9.93262 ms, percentile(95%) = 9.93506 ms, percentile(99%) = 9.94336 ms
 
-Enqueue Time: min = 0.0185547 ms, max = 0.404541 ms, mean = 0.0530362 ms, median = 0.045166 ms, percentile(90%) = 0.0917969 ms, percentile(95%) = 0.101929 ms, percentile(99%) = 0.182617 ms
+Enqueue Time: min = 0.0205078 ms, max = 0.816406 ms, mean = 0.0682629 ms, median = 0.0556641 ms, percentile(90%) = 0.10791 ms, percentile(95%) = 0.126587 ms, percentile(99%) = 0.287109 ms
 
 H2D Latency: min = 0 ms, max = 0 ms, mean = 0 ms, median = 0 ms, percentile(90%) = 0 ms, percentile(95%) = 0 ms, percentile(99%) = 0 ms
 
-GPU Compute Time: min = 9.33887 ms, max = 9.85602 ms, mean = 9.38359 ms, median = 9.38232 ms, percentile(90%) = 9.39453 ms, percentile(95%) = 9.39648 ms, percentile(99%) = 9.4043 ms
+GPU Compute Time: min = 9.87646 ms, max = 10.3865 ms, mean = 9.92575 ms, median = 9.92285 ms, percentile(90%) = 9.93262 ms, percentile(95%) = 9.93506 ms, percentile(99%) = 9.94336 ms
 
 D2H Latency: min = 0 ms, max = 0 ms, mean = 0 ms, median = 0 ms, percentile(90%) = 0 ms, percentile(95%) = 0 ms, percentile(99%) = 0 ms
 
-Total Host Walltime: 10.0141 s
+Total Host Walltime: 10.0168 s
 
-Total GPU Compute Time: 10.0123 s
+Total GPU Compute Time: 10.0151 s
 ```
 
 ## BatchSize 8
 ```bash
 === Performance summary ===
-Throughput: 52.0447 qps
+Throughput: 48.9795 qps
 
-Latency: min = 19.1416 ms, max = 19.2432 ms, mean = 19.2125 ms, median = 19.2153 ms, percentile(90%) = 19.2285 ms, percentile(95%) = 19.2314 ms, percentile(99%) = 19.2373 ms
+Latency: min = 20.3469 ms, max = 20.4493 ms, mean = 20.4151 ms, median = 20.4155 ms, percentile(90%) = 20.4277 ms, percentile(95%) = 20.4316 ms, percentile(99%) = 20.4404 ms
 
-Enqueue Time: min = 0.0244141 ms, max = 0.469727 ms, mean = 0.0681757 ms, median = 0.0585938 ms, percentile(90%) = 0.110352 ms, percentile(95%) = 0.121094 ms, percentile(99%) = 0.201172 ms
+Enqueue Time: min = 0.0214844 ms, max = 0.877686 ms, mean = 0.0798938 ms, median = 0.0661621 ms, percentile(90%) = 0.120117 ms, percentile(95%) = 0.139648 ms, percentile(99%) = 0.259033 ms
 
 H2D Latency: min = 0 ms, max = 0 ms, mean = 0 ms, median = 0 ms, percentile(90%) = 0 ms, percentile(95%) = 0 ms, percentile(99%) = 0 ms
 
-GPU Compute Time: min = 19.1416 ms, max = 19.2432 ms, mean = 19.2125 ms, median = 19.2153 ms, percentile(90%) = 19.2285 ms, percentile(95%) = 19.2314 ms, percentile(99%) = 19.2373 ms
+GPU Compute Time: min = 20.3469 ms, max = 20.4493 ms, mean = 20.4151 ms, median = 20.4155 ms, percentile(90%) = 20.4277 ms, percentile(95%) = 20.4316 ms, percentile(99%) = 20.4404 ms
 
 D2H Latency: min = 0 ms, max = 0 ms, mean = 0 ms, median = 0 ms, percentile(90%) = 0 ms, percentile(95%) = 0 ms, percentile(99%) = 0 ms
 
-Total Host Walltime: 10.0298 s
+Total Host Walltime: 10.045 s
 
-Total GPU Compute Time: 10.0289 s
+Total GPU Compute Time: 10.0442 s
 ```
 
 ## BatchSize 12
 ```bash
 === Performance summary ===
-Throughput: 34.0602 qps
+Throughput: 32.2164 qps
 
-Latency: min = 29.3171 ms, max = 29.3848 ms, mean = 29.358 ms, median = 29.3582 ms, percentile(90%) = 29.3711 ms, percentile(95%) = 29.3745 ms, percentile(99%) = 29.3799 ms
+Latency: min = 30.9985 ms, max = 31.0781 ms, mean = 31.0384 ms, median = 31.0385 ms, percentile(90%) = 31.0527 ms, percentile(95%) = 31.0566 ms, percentile(99%) = 31.0645 ms
 
-Enqueue Time: min = 0.0214844 ms, max = 1.28125 ms, mean = 0.0729841 ms, median = 0.0595703 ms, percentile(90%) = 0.109131 ms, percentile(95%) = 0.12207 ms, percentile(99%) = 0.225586 ms
+Enqueue Time: min = 0.026123 ms, max = 1.74219 ms, mean = 0.092572 ms, median = 0.0689087 ms, percentile(90%) = 0.121948 ms, percentile(95%) = 0.154297 ms, percentile(99%) = 0.342285 ms
 
 H2D Latency: min = 0 ms, max = 0 ms, mean = 0 ms, median = 0 ms, percentile(90%) = 0 ms, percentile(95%) = 0 ms, percentile(99%) = 0 ms
 
-GPU Compute Time: min = 29.3171 ms, max = 29.3848 ms, mean = 29.358 ms, median = 29.3582 ms, percentile(90%) = 29.3711 ms, percentile(95%) = 29.3745 ms, percentile(99%) = 29.3799 ms
+GPU Compute Time: min = 30.9985 ms, max = 31.0781 ms, mean = 31.0384 ms, median = 31.0385 ms, percentile(90%) = 31.0527 ms, percentile(95%) = 31.0566 ms, percentile(99%) = 31.0645 ms
 
 D2H Latency: min = 0 ms, max = 0 ms, mean = 0 ms, median = 0 ms, percentile(90%) = 0 ms, percentile(95%) = 0 ms, percentile(99%) = 0 ms
 
-Total Host Walltime: 10.0704 s
+Total Host Walltime: 10.057 s
 
-Total GPU Compute Time: 10.0698 s
+Total GPU Compute Time: 10.0564 s
 ```
 
 ## BatchSize 16
 ```bash
 === Performance summary ===
-Throughput: 25.3558 qps
+Throughput: 24.0168 qps
 
-Latency: min = 39.3062 ms, max = 39.4702 ms, mean = 39.4369 ms, median = 39.4434 ms, percentile(90%) = 39.457 ms, percentile(95%) = 39.4609 ms, percentile(99%) = 39.4658 ms
+Latency: min = 41.5017 ms, max = 42.3014 ms, mean = 41.6358 ms, median = 41.6362 ms, percentile(90%) = 41.6533 ms, percentile(95%) = 41.6572 ms, percentile(99%) = 41.6689 ms
 
-Enqueue Time: min = 0.0280762 ms, max = 0.297852 ms, mean = 0.0752583 ms, median = 0.0595703 ms, percentile(90%) = 0.117981 ms, percentile(95%) = 0.133789 ms, percentile(99%) = 0.247559 ms
+Enqueue Time: min = 0.0336914 ms, max = 0.427734 ms, mean = 0.0749446 ms, median = 0.0615234 ms, percentile(90%) = 0.114746 ms, percentile(95%) = 0.125977 ms, percentile(99%) = 0.236694 ms
 
 H2D Latency: min = 0 ms, max = 0 ms, mean = 0 ms, median = 0 ms, percentile(90%) = 0 ms, percentile(95%) = 0 ms, percentile(99%) = 0 ms
 
-GPU Compute Time: min = 39.3062 ms, max = 39.4702 ms, mean = 39.4369 ms, median = 39.4434 ms, percentile(90%) = 39.457 ms, percentile(95%) = 39.4609 ms, percentile(99%) = 39.4658 ms
+GPU Compute Time: min = 41.5017 ms, max = 42.3014 ms, mean = 41.6358 ms, median = 41.6362 ms, percentile(90%) = 41.6533 ms, percentile(95%) = 41.6572 ms, percentile(99%) = 41.6689 ms
 
 D2H Latency: min = 0 ms, max = 0 ms, mean = 0 ms, median = 0 ms, percentile(90%) = 0 ms, percentile(95%) = 0 ms, percentile(99%) = 0 ms
 
-Total Host Walltime: 10.0963 s
+Total Host Walltime: 10.0763 s
 
-Total GPU Compute Time: 10.0959 s
+Total GPU Compute Time: 10.0759 s
 ```
 
 ## BatchSize Resilience
 ```bash
 === Performance summary ===
-Throughput: 51.8852 qps
+Throughput: 48.9537 qps
 
-Latency: min = 19.2103 ms, max = 19.2993 ms, mean = 19.2714 ms, median = 19.2725 ms, percentile(90%) = 19.2871 ms, percentile(95%) = 19.29 ms, percentile(99%) = 19.2964 ms
+Latency: min = 20.3582 ms, max = 20.4644 ms, mean = 20.4257 ms, median = 20.4277 ms, percentile(90%) = 20.4424 ms, percentile(95%) = 20.4463 ms, percentile(99%) = 20.4546 ms
 
-Enqueue Time: min = 0.0205078 ms, max = 0.53772 ms, mean = 0.0724351 ms, median = 0.0610352 ms, percentile(90%) = 0.114258 ms, percentile(95%) = 0.132812 ms, percentile(99%) = 0.210449 ms
+Enqueue Time: min = 0.0234375 ms, max = 0.961426 ms, mean = 0.0835144 ms, median = 0.0634766 ms, percentile(90%) = 0.123291 ms, percentile(95%) = 0.159912 ms, percentile(99%) = 0.320312 ms
 
 H2D Latency: min = 0 ms, max = 0 ms, mean = 0 ms, median = 0 ms, percentile(90%) = 0 ms, percentile(95%) = 0 ms, percentile(99%) = 0 ms
 
-GPU Compute Time: min = 19.2103 ms, max = 19.2993 ms, mean = 19.2714 ms, median = 19.2725 ms, percentile(90%) = 19.2871 ms, percentile(95%) = 19.29 ms, percentile(99%) = 19.2964 ms
+GPU Compute Time: min = 20.3582 ms, max = 20.4644 ms, mean = 20.4257 ms, median = 20.4277 ms, percentile(90%) = 20.4424 ms, percentile(95%) = 20.4463 ms, percentile(99%) = 20.4546 ms
 
 D2H Latency: min = 0 ms, max = 0 ms, mean = 0 ms, median = 0 ms, percentile(90%) = 0 ms, percentile(95%) = 0 ms, percentile(99%) = 0 ms
 
-Total Host Walltime: 10.0414 s
+Total Host Walltime: 10.0299 s
 
-Total GPU Compute Time: 10.0404 s
+Total GPU Compute Time: 10.029 s
 ```
