@@ -128,45 +128,166 @@ trtexec \
 | **執行細節**   | 封裝於腳本中，細節未展開                             | 直接執行 `trtexec`，所有參數顯式定義                 |
 
 # Result --using Benchmark
-## yolov9-QAT(SiLU)
 
-- [SiLU_MP](./SiLU_MP.md)
+## Device 
+| **GPU**        |                              |
+|---------------------------|------------------------------|
+| Device           | **NVIDIA GeForce RTX 4050 Laptop GPU**      |
+| Compute Capability        | 8.9                          |
+| SMs                       | 20                          |
+| Device Global Memory      | 6140 MiB                    |
+| Application Compute Clock Rate | 2.355 GHz               |
+| Application Memory Clock Rate  | 7.825 GHz             |
+
+## Latency/Throughput  
+
+| Model Name      | Batch Size | Latency (99%) | Throughput (qps) | Total Inferences (IPS) |
+|-----------------|------------|----------------|-----------------|------------------------|
+| **INT8 (SiLU)** | 1          | 2.89 ms        | 347             | 347                    |
+|                 | 4          | 9.78 ms        | 103             | 412                    |
+|                 | 8          | 20.40 ms       | 50              | 400                    |
+|                 | 12         | 30.91 ms       | 33              | 396                    |
+|                 | 16         | 41.55 ms       | 25              | 400                    |
+|                 | Resilience | 20.40 ms       | 50              | ≈ 400                  |
+|                 |            |                |                 |                        |
+| **FP16 (SiLU)** | 1          | 2.84 ms        | 354             | 354                    |
+|                 | 4          | 9.44 ms        | 107             | 428                    |
+|                 | 8          | 19.26 ms       | 52              | 416                    |
+|                 | 12         | 29.28 ms       | 35              | 420                    |
+|                 | 16         | 39.43 ms       | 26              | 416                    |
+|                 | Resilience | 19.24 ms       | 53              | ≈ 424                  |
+|                 |            |                |                 |                        |
+| **MP (SiLU)**   | 1          | 2.84 ms        | 354             | 354                    |
+|                 | 4          | 9.45 ms        | 106             | 424                    |
+|                 | 8          | 19.26 ms       | 52              | 416                    |
+|                 | 12         | 29.35 ms       | 35              | 420                    |
+|                 | 16         | 39.45 ms       | 26              | 416                    |
+|                 | Resilience | 21.84 ms       | 52              | ≈ 416                  |
+|                 |            |                |                 |                        |
+| **INT8 (ReLU)** | 1          | 2.80 ms        | 357             | 357                    |
+|                 | 4          | 9.73 ms        | 103             | 412                    |
+|                 | 8          | 20.40 ms       | 50              | 400                    |
+|                 | 12         | 30.98 ms       | 33              | 396                    |
+|                 | 16         | 49.13 ms       | 24              | 384                    |
+|                 | Resilience | 20.35 ms       | 50              | ≈ 400                  |
+|                 |            |                |                 |                        |
+| **FP16 (ReLU)** | 1          | 2.74 ms        | 366             | 366                    |
+|                 | 4          | 9.40 ms        | 107             | 428                    |
+|                 | 8          | 19.24 ms       | 53              | 424                    |
+|                 | 12         | 29.38 ms       | 35              | 420                    |
+|                 | 16         | 39.47 ms       | 26              | 416                    |
+|                 | Resilience | 19.30 ms       | 52              | ≈ 416                  |
+|                 |            |                |                 |                        |
+| **MP (ReLU)**   | 1          | 2.75 ms        | 365             | 365                    |
+|                 | 4          | 10.29 ms       | 106             | 424                    |
+|                 | 8          | 19.22 ms       | 53              | 424                    |
+|                 | 12         | 29.42 ms       | 35              | 420                    |
+|                 | 16         | 46.17 ms       | 26              | 416                    |
+|                 | Resilience | 19.31 ms       | 52              | ≈ 416                  |
+|                 |            |                |                 |                        |
+| **INT8 (FReLU)**| 1          | 4.87 ms        | 325             | 325                    |
+|                 | 4          | 9.78 ms        | 103             | 412                    |
+|                 | 8          | 20.49 ms       | 49              | 392                    |
+|                 | 12         | 36.00 ms       | 33              | 396                    |
+|                 | 16         | 41.54 ms       | 25              | 400                    |
+|                 | Resilience | 20.56 ms       | 49              | ≈ 392                  |
+|                 |            |                |                 |                        |
+| **FP16 (FReLU)**| 1          | 2.79 ms        | 360             | 360                    |
+|                 | 4          | 9.44 ms        | 107             | 428                    |
+|                 | 8          | 19.35 ms       | 52              | 416                    |
+|                 | 12         | 29.29 ms       | 35              | 420                    |
+|                 | 16         | 39.42 ms       | 26              | 416                    |
+|                 | Resilience | 19.29 ms       | 52              | ≈ 416                  |
+|                 |            |                |                 |                        |
+| **MP (FReLU)**  | 1          | 2.80 ms        | 359             | 359                    |
+|                 | 4          | 9.48 ms        | 106             | 424                    |
+|                 | 8          | 19.35 ms       | 52              | 416                    |
+|                 | 12         | 29.30 ms       | 35              | 420                    |
+|                 | 16         | 46.18 ms       | 26              | 416                    |
+|                 | Resilience | 19.35 ms       | 52              | ≈ 416                  |
+|                 |            |                |                 |                        |
+| **INT8 (Mish)** | 1          | 3.04 ms        | 331             | 331                    |
+|                 | 4          | 10.96 ms       | 92              | 368                    |
+|                 | 8          | 20.45 ms       | 49              | 392                    |
+|                 | 12         | 31.06 ms       | 33              | 396                    |
+|                 | 16         | 41.69 ms       | 25              | 400                    |
+|                 | Resilience | 20.48 ms       | 49              | ≈ 392                  |
+|                 |            |                |                 |                        |
+| **FP16 (Mish)** | 1          | 2.87 ms        | 349             | 349                    |
+|                 | 4          | 9.94 ms        | 101             | 404                    |
+|                 | 8          | 20.44 ms       | 49              | 392                    |
+|                 | 12         | 31.06 ms       | 33              | 396                    |
+|                 | 16         | 41.67 ms       | 25              | 400                    |
+|                 | Resilience | 20.45 ms       | 49              | ≈ 392                  |
+|                 |            |                |                 |                        |
+| **MP (Mish)**   | 1          | 2.88 ms        | 348             | 348                    |
+|                 | 4          | 9.94 ms        | 101             | 404                    |
+|                 | 8          | 20.45 ms       | 49              | 392                    |
+|                 | 12         | 31.06 ms       | 33              | 396                    |
+|                 | 16         | 41.69 ms       | 25              | 400                    |
+|                 | Resilience | 20.48 ms       | 49              | ≈ 392                  |
+|                 |            |                |                 |                        |
+| **INT8 (AconC)**| 1          | 3.45 ms        | 338             | 338                    |
+|                 | 4          | 15.92 ms       | 92              | 368                    |
+|                 | 8          | 20.32 ms       | 50              | 400                    |
+|                 | 12         | 30.91 ms       | 33              | 396                    |
+|                 | 16         | 41.52 ms       | 25              | 400                    |
+|                 | Resilience | 23.30 ms       | 49              | ≈ 392                  |
+|                 |            |                |                 |                        |
+| **FP16 (AconC)**| 1          | 2.90 ms        | 346             | 346                    |
+|                 | 4          | 9.38 ms        | 107             | 428                    |
+|                 | 8          | 19.28 ms       | 52              | 416                    |
+|                 | 12         | 29.28 ms       | 35              | 420                    |
+|                 | 16         | 39.29 ms       | 26              | 416                    |
+|                 | Resilience | 19.25 ms       | 53              | ≈ 424                  |
+|                 |            |                |                 |                        |
+| **MP (AconC)**  | 1          | 2.91 ms        | 345             | 345                    |
+|                 | 4          | 10.19 ms       | 107             | 428                    |
+|                 | 8          | 19.29 ms       | 52              | 416                    |
+|                 | 12         | 29.32 ms       | 35              | 420                    |
+|                 | 16         | 39.42 ms       | 26              | 416                    |
+|                 | Resilience | 27.81 ms       | 46              | ≈ 368                  |
+|                 |            |                |                 |                        |
+
+## yolov9-QAT(SiLU)
 
 - [SiLU_INT8](./SiLU_INT8.md)
 
 - [SiLU_FP16](./SiLU_FP16.md)
 
-## yolov9-QAT(ReLU)
+- [SiLU_MP](./SiLU_MP.md)
 
-- [ReLU_MP](./ReLU_MP.md)
+## yolov9-QAT(ReLU)
 
 - [ReLU_INT8](./ReLU_INT8.md)
 
 - [ReLU_FP16](./ReLU_FP16.md)
 
-## yolov9-QAT(FReLU)
+- [ReLU_MP](./ReLU_MP.md)
 
-- [FReLU_MP](./FReLU_MP.md)
+## yolov9-QAT(FReLU)
 
 - [FReLU_INT8](./FReLU_INT8.md)
 
 - [FReLU_FP16](./FReLU_FP16.md)
 
-## yolov9-QAT(Mish)
+- [FReLU_MP](./FReLU_MP.md)
 
-- [Mish_MP](./Mish_MP.md)
+## yolov9-QAT(Mish)
 
 - [Mish_INT8](./Mish_INT8.md)
 
 - [Mish_FP16](./Mish_FP16.md)
 
-## yolov9-QAT(Aconc)
+- [Mish_MP](./Mish_MP.md)
 
-- [AconC_MP](./AconC_MP.md)
+## yolov9-QAT(AconC)
 
 - [AconC_INT8](./AconC_INT8.md)
 
 - [AconC_FP16](./AconC_FP16.md)
+
+- [AconC_MP](./AconC_MP.md)
 
 ### Evaluation Results
 
