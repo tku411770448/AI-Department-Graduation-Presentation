@@ -226,26 +226,22 @@ trtexec \
 #### Activation ReLU
 | Eval Model           | AP   | AP50 | Precision | Recall |
 |----------------------|------|------|-----------|--------|
-| **INT8 (TensorRT)** vs **Origin (Pytorch)** |       |      |          |        |
-|                      | +0.0027 | -0.0015 | -0.0273 | +0.0067 |
+| **INT8 (TensorRT)** vs **Origin (Pytorch)** | +0.0027 | -0.0015 | -0.0273 | +0.0067 |                      
 
 #### Activation FReLU
 | Eval Model           | AP   | AP50 | Precision | Recall |
 |----------------------|------|------|-----------|--------|
-| **INT8 (TensorRT)** vs **Origin (Pytorch)** |       |      |          |        |
-|                      | +0.0028 | -0.0012 | -0.028 | +0.0067 |
+| **INT8 (TensorRT)** vs **Origin (Pytorch)** | +0.0028 | -0.0012 | -0.028 | +0.0067 |                      
 
 #### Activation Mish
 | Eval Model           | AP   | AP50 | Precision | Recall |
 |----------------------|------|------|-----------|--------|
-| **INT8 (TensorRT)** vs **Origin (Pytorch)** |       |      |          |        |
-|                      | +0.0028 | -0.0032 | -0.0261 | +0.0008 |
+| **INT8 (TensorRT)** vs **Origin (Pytorch)** | +0.0028 | -0.0032 | -0.0261 | +0.0008 |                      
 
 #### Activation AconC
 | Eval Model           | AP   | AP50 | Precision | Recall |
 |----------------------|------|------|-----------|--------|
-| **INT8 (TensorRT)** vs **Origin (Pytorch)** |       |      |          |        |
-|                      | +0.0028 | -0.0018 | -0.0209 | +0.0062 |
+| **INT8 (TensorRT)** vs **Origin (Pytorch)** | +0.0028 | -0.0018 | -0.0209 | +0.0062 |                      
 
 
 
