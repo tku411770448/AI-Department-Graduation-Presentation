@@ -168,6 +168,55 @@ trtexec \
 
 - [AconC_FP16](./AconC_FP16.md)
 
+### Evaluation Results
+
+## Detection
+#### Activation SiLU
+
+| Eval Model | AP     | AP50   | Precision | Recall |
+|------------|--------|--------|-----------|--------|
+| **Origin (Pytorch)**     | 0.3152 | 0.6856  | 0.6422    | 0.7023  |
+| **INT8 (Pytorch)** | 0.3171 | 0.6828 | 0.6179    | 0.7044 |
+| **INT8 (TensorRT)**   | 0.3177  | 0.6838  | 0.613     | 0.7074   |
+
+
+#### Activation ReLU  
+
+| Eval Model | AP     | AP50   | Precision | Recall |
+|------------|--------|--------|-----------|--------|
+| **Origin (Pytorch)**     | 0.3152 | 0.6856  | 0.6422    | 0.7023  |
+| **INT8 (Pytorch)** | 0.3171 | 0.6828 | 0.6179    | 0.7044 |
+| **INT8 (TensorRT)**   | 0.3179  | 0.6841  | 0.6149     | 0.709   |
+
+
+#### Activation FReLU  
+
+| Eval Model | AP     | AP50   | Precision | Recall |
+|------------|--------|--------|-----------|--------|
+| **Origin (Pytorch)**     | 0.3152 | 0.6856  | 0.6422    | 0.7023  |
+| **INT8 (Pytorch)** | 0.3171 | 0.6828 | 0.6179    | 0.7044 |
+| **INT8 (TensorRT)**   | 0.318  | 0.6844  | 0.6142     | 0.709   |
+
+
+#### Activation Mish  
+
+| Eval Model | AP     | AP50   | Precision | Recall |
+|------------|--------|--------|-----------|--------|
+| **Origin (Pytorch)**     | 0.3152 | 0.6856  | 0.6422    | 0.7023  |
+| **INT8 (Pytorch)** | 0.3171 | 0.6828 | 0.6179    | 0.7044 |
+| **INT8 (TensorRT)**   | 0.318  | 0.6824  | 0.6161     | 0.7031   |
+
+
+#### Activation AconC  
+
+| Eval Model | AP     | AP50   | Precision | Recall |
+|------------|--------|--------|-----------|--------|
+| **Origin (Pytorch)**     | 0.3152 | 0.6856  | 0.6422    | 0.7023  |
+| **INT8 (Pytorch)** | 0.3171 | 0.6828 | 0.6179    | 0.7044 |
+| **INT8 (TensorRT)**   | 0.318  | 0.6838  | 0.6213     | 0.7085   |
+
+
+
 
 
 
