@@ -127,7 +127,7 @@ trtexec \
 | **額外功能**   | 生成計算圖 (`--generate-graph`)                      | 無此功能                                              |
 | **執行細節**   | 封裝於腳本中，細節未展開                             | 直接執行 `trtexec`，所有參數顯式定義                 |
 
-# Result
+# Result --using Benchmark
 ## yolov9-QAT(SiLU)
 
 - [SiLU_MP](./SiLU_MP.md)
@@ -214,6 +214,41 @@ trtexec \
 | **Origin (Pytorch)**     | 0.3152 | 0.6856  | 0.6422    | 0.7023  |
 | **INT8 (Pytorch)** | 0.3171 | 0.6828 | 0.6179    | 0.7044 |
 | **INT8 (TensorRT)**   | 0.318  | 0.6838  | 0.6213     | 0.7085   |
+
+
+### Evaluation Comparison 
+
+#### Activation SiLU
+| Eval Model           | AP   | AP50 | Precision | Recall |
+|----------------------|------|------|-----------|--------|
+| **INT8 (TensorRT)** vs **Origin (Pytorch)** |       |      |          |        |
+|                      | +0.0025 | -0.0018 | -0.0292 | +0.0051 |
+
+#### Activation ReLU
+| Eval Model           | AP   | AP50 | Precision | Recall |
+|----------------------|------|------|-----------|--------|
+| **INT8 (TensorRT)** vs **Origin (Pytorch)** |       |      |          |        |
+|                      | +0.0027 | -0.0015 | -0.0273 | +0.0067 |
+
+#### Activation FReLU
+| Eval Model           | AP   | AP50 | Precision | Recall |
+|----------------------|------|------|-----------|--------|
+| **INT8 (TensorRT)** vs **Origin (Pytorch)** |       |      |          |        |
+|                      | +0.0028 | -0.0012 | -0.028 | +0.0067 |
+
+#### Activation Mish
+| Eval Model           | AP   | AP50 | Precision | Recall |
+|----------------------|------|------|-----------|--------|
+| **INT8 (TensorRT)** vs **Origin (Pytorch)** |       |      |          |        |
+|                      | +0.0028 | -0.0032 | -0.0261 | +0.0008 |
+
+#### Activation AconC
+| Eval Model           | AP   | AP50 | Precision | Recall |
+|----------------------|------|------|-----------|--------|
+| **INT8 (TensorRT)** vs **Origin (Pytorch)** |       |      |          |        |
+|                      | +0.0028 | -0.0018 | -0.0209 | +0.0062 |
+
+
 
 
 
