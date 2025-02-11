@@ -221,8 +221,7 @@ trtexec \
 #### Activation SiLU
 | Eval Model           | AP   | AP50 | Precision | Recall |
 |----------------------|------|------|-----------|--------|
-| **INT8 (TensorRT)** vs **Origin (Pytorch)** |       |      |          |        |
-|                      | +0.0025 | -0.0018 | -0.0292 | +0.0051 |
+| **INT8 (TensorRT)** vs **Origin (Pytorch)** | +0.0025 | -0.0018 | -0.0292 | +0.0051 |                      
 
 #### Activation ReLU
 | Eval Model           | AP   | AP50 | Precision | Recall |
